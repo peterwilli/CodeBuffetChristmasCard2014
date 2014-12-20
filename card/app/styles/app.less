@@ -1,0 +1,48 @@
+@import url("prefixer.less");
+
+html { height: 100%; }
+body { min-height: 100%; }
+
+body {
+  background: #347bb6;
+  margin: 0;
+  padding: 0;
+}
+
+.snow {
+  position: fixed;
+  bottom: 0px;
+  height: 171px;
+  width: 100%;
+}
+
+.flakes {
+  z-index: 3;
+  position:absolute;
+
+  .flake {
+    margin-top: -32px;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    position: absolute;
+    .border-radius(32px);
+  }
+}
+
+.snow1 {
+  background: url(../images/snow1.png) repeat-x;
+  height: 171px;
+  width: 100%;
+  z-index: 1;
+  position:absolute;
+}
+
+.snow2 {
+  background: url(../images/snow2.png) repeat-x;
+  height: 205px;
+  width: 100%;
+  z-index: 0;
+  top: -40px;
+  position:absolute;
+}
