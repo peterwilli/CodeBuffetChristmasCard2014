@@ -31,7 +31,8 @@
       #console.log key
       if key?
         $.get("msgs/" + key + ".txt", (data) ->
-            $(".card-text-inner .back").text(data)
+          $(".card-text-inner .front").text(data)
+          $(".card-text-inner .back").text(data)
         )
 
 
