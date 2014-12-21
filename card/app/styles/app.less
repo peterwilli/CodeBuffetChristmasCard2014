@@ -18,15 +18,18 @@ body {
   background: #347bb6;
   margin: 0;
   padding: 0;
+  -webkit-transition: translate3d(0,0,0);
 }
 
 .card-text {
 
+  opacity: 0;
   left: 50%;
   position: absolute;
   min-width: 320px;
   width: 30%;
   margin-top: 100px;
+  font-family: 'Courgette', cursive;
 
   .card-text-inner .back {
     color:#000 !important;
@@ -34,14 +37,19 @@ body {
 
   .card-text-inner {
     .front, .back {
+      word-wrap: break-word;
+      text-overflow: ellipsis; // This is where the magic happen
       .box-sizing(border-box);
       padding: 4px;
-      position: absolute;
       color: transparent;
       background: #fff;
       left: -50%;
       width: 100%;
-      white-space: pre;
+      white-space: pre-wrap;      /* CSS3 */
+      white-space: -moz-pre-wrap; /* Firefox */
+      white-space: -pre-wrap;     /* Opera <7 */
+      white-space: -o-pre-wrap;   /* Opera 7 */
+      word-wrap: break-word;      /* IE */
       z-index:5;
 
       .border-radius(1px);
