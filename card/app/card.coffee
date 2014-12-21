@@ -21,7 +21,7 @@ fetchMessage = ->
   #console.log key
   if key?
     $.get("msgs/" + key + ".txt", (data) ->
-        $(".card-text").text(data)
+        $(".card-text-inner").text(data)
     )
 
 
