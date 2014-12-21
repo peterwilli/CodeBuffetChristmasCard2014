@@ -1,4 +1,5 @@
 **/.DS_Store
+app/assets/msgs/*.txt
 nbproject
 manifest.mf
 build.xml
