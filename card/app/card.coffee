@@ -31,9 +31,13 @@
       #console.log key
       if key?
         $.get("msgs/" + key + ".txt", (data) ->
-          $(".card-text-inner .front").text(data)
-          $(".card-text-inner .back").text(data)
+          #$(".card-text-inner .front").text(data)
+          $back = $(".card-text-inner .back");
+          $back.text(data)
           $(".card-text").transit(opacity: 1, duration: 1000)
+          setTimeout(->
+            $(".text-scroller").css('height', ($back.height() + $back.offset().top + 100) + "px")
+          , 100)
         )
 
 
